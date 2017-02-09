@@ -1,0 +1,6 @@
+framework module Pods_ExpandingTest2 {
+  umbrella header "Pods-ExpandingTest2-umbrella.h"
+
+  export *
+  module * { export * }
+}
