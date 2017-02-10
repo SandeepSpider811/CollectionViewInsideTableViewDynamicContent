@@ -72,7 +72,7 @@ class ViewController: UITableViewController {
             tableView.reloadRows(at: indexPaths as [IndexPath], with: .automatic)
         }
     }
-    
+    //dynamic height of tableview cell
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath == selectedIndexPath {
             var expandedHeight: Int = 106

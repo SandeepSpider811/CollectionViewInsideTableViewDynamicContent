@@ -29,14 +29,13 @@ class ExpandedCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     private let leftAndRightPadding: CGFloat = 2.0
     private let numberOfItemsPerRow: CGFloat = 3.0
     
-    class var expandedHeight: CGFloat {get { return 306}}
-    
     class var defaultHeight: CGFloat {get {return 106}}
     
     override func awakeFromNib() {
         collectionViewOutlet.delegate = self
         collectionViewOutlet.dataSource = self
-        
+        self.collectionViewOutlet.isScrollEnabled = false //scrolling disabled
+        //collection view cell according to width of screen
         let widthOfCollectionCell = (collectionViewOutlet.frame.width - leftAndRightPadding) / numberOfItemsPerRow
         let layout = collectionViewOutlet?.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.itemSize = CGSize(width: widthOfCollectionCell, height: widthOfCollectionCell)
